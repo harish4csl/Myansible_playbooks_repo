@@ -1,0 +1,9 @@
+---
+- name: playbook for installing pkg
+  hosts: all
+  become: yes
+  tasks:
+  - name: Install docker package
+    yum:
+      name: docker
+      state: present

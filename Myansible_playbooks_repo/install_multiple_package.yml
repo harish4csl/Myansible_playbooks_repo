@@ -1,0 +1,9 @@
+---
+ - name: install multiple package test playbook
+   hosts: all
+   become: true
+   tasks:
+   - name: install packages
+     yum:
+      name: [ 'git', 'tree', 'docker', 'wget', 'mysql', 'make']
+      state: installed
